@@ -1,0 +1,343 @@
+
+ /* Suppress Connecting/Waiting/Reading/Transerring */
+ #statuspanel[type="status"] {
+   display: none !important;
+ }
+ /* Suppress Link Destination Overlay */
+ #statuspanel[type="overLink"] {
+   display: none !important;
+ }
+
+/* URL BAR */
+
+#urlbar-container{
+   margin-bottom: 15px;
+}
+
+#urlbar-background { 
+/*     outline: none !important;  */
+    box-shadow: none !important;
+    border-radius: 30px !important;
+}
+
+#urlbar[focused="true"] #urlbar-background{
+    outline: none !important;
+/*     box-shadow: 0 0 10px 0px  #b4f9f8 !important; */
+}
+
+ /* Inactive Address/Search Field */
+
+ :root:not([lwt-default-theme-in-dark-mode]) #urlbar-background {
+   background-color: rgba(0,0,0,.05) !important;
+ }
+ 
+ :root[lwt-default-theme-in-dark-mode] #urlbar-background {
+    background: #24283b !important;  
+ }
+
+ /* Active Address/Search Field Dropdown */
+ :root:not([lwt-default-theme-in-dark-mode])  #urlbar[breakout][breakout-extend] > #urlbar-background {
+    background: rgba(250,250,250,1) !important;
+ }
+ 
+ :root[lwt-default-theme-in-dark-mode]  #urlbar[breakout][breakout-extend] > #urlbar-background {
+    background: #000 !important;
+    opacity: 0.85 ;
+/*     box-shadow: 0 0 15px 0 #b4f9f8 !important; */
+}
+
+
+
+ /*  ---------  */
+ /* | Borders | */
+ /*  ---------  */
+ 
+ .tabbrowser-tab::after {
+    border: 0 !important;
+ }
+ .titlebar-spacer[type="pre-tabs"] {
+    border: 0 !important;
+ }
+ #navigator-toolbox {
+    border: 1 !important;
+ }
+ 
+ .titlebar-spacer[type="pre-tabs"] {
+    border: 0 !important;
+ }
+ 
+ .tabbrowser-tab::after {
+    border: 0 !important;
+ }
+ 
+ #urlbar-background {
+    border: 0 !important;
+ }
+ 
+#urlbar[open] > .urlbarView > .urlbarView-body-outer > .urlbarView-body-inner {
+     border-top: 0 !important;
+ }
+
+ 
+ /* Active Tab */
+ :root:not([lwt-default-theme-in-dark-mode]) .tab-background[selected],
+ .tab-background[multiselected="true"] {	
+    background: rgba(0,0,0,.05) !important;
+ }
+ 
+ :root[lwt-default-theme-in-dark-mode] .tab-background[selected],
+ .tab-background[multiselected="true"] {	
+    background: rgba(0,0,0,.2) !important;
+ }
+ 
+ 
+ /* Navigation Bar */
+ 
+#nav-bar {
+   margin-top: -10px;
+   padding-bottom: 5px;
+}
+
+ :root:not([lwt-default-theme-in-dark-mode]) #nav-bar {
+   background-color: #d5d6db !important;
+ }
+
+ :root[lwt-default-theme-in-dark-mode] #nav-bar {
+   background-color: #1a1b26 !important;
+ }
+ 
+
+
+ 
+ /* Bookmarks Bar */
+ :root:not([lwt-default-theme-in-dark-mode]) #PersonalToolbar {
+    background-color: rgba(255,255,255,.65) !important;
+ }
+ 
+ :root[lwt-default-theme-in-dark-mode] #PersonalToolbar {
+    background-color: rgba(0,0,0,0.3) !important;
+ }
+ 
+ 
+ /* Navigation Bar Separator */
+ 
+ :root[lwt-default-theme-in-dark-mode] #navigator-toolbox {
+   border-color:rgba(0,0,0,0.3) !important;
+ }
+ 
+ :root:not([lwt-default-theme-in-dark-mode]) #navigator-toolbox {
+   border-color:rgba(240,240,240, 1) !important;
+ }
+ /* Navigation bar Buttons */
+:root,toolbar{ --toolbarbutton-hover-background: rgba(255,255,255,.11) !important; }
+
+ /* Show Tab close button on hover */
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+  display: -moz-box !important;
+  opacity: 0;
+  visibility: collapse !important;
+  transition: opacity 0.25s, visibility 0.25s ease-in !important;
+}
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  opacity: 1;
+  visibility: visible !important;
+  border-radius: 3px 3px 3px 3px !important;
+}
+
+ /* Toolbar Buttons */
+#PersonalToolbar {
+  background-image: url(image/noise-512x512.png) !important;
+  background-color: #2a2a2ac0 !important;
+  -webkit-backdrop-filter: blur(32px) !important;
+  backdrop-filter: blur(32px) !important;
+}
+:root:-moz-lwtheme {
+	--arrowpanel-background:  rgba(34, 34, 36, 1) !important;
+	-panel-separator-zap-gradient: linear-gradient(90deg, rgba(11,11,11,1) 0%, rgba(193,118,40,1) 39%, rgba(52,12,48,1) 100%) !important;
+	--button-hover-bgcolor: rgba(159, 159, 159, 0.35) !important;
+	--button-active-bgcolor: rgba(255, 255, 255, .2) !important;
+	--button-bgcolor: rgba(117, 117, 117, 0.9) !important;
+	--toolbarbutton-icon-fill-opacity: 0.8 !important;
+	--arrowpanel-border-color: rgb(55, 55, 55) !important;
+}
+
+:root:-moz-lwtheme  {
+	--dark-menu-background-color: rgba(34, 34, 36, .5) !important;
+	--dark-menu-border-color: rgb(55, 55, 55) !important;
+	--dark-menuitem-hover-background-color: rgba(159, 159, 159, 0.35) !important;
+}
+
+/* Show URL buttons on Hover */
+   #nav-bar:not([customizing="true"])
+  > #nav-bar-customization-target
+  > #urlbar-container:not(:hover)
+  > #urlbar:not([focused])
+  > #urlbar-input-container
+  > #page-action-buttons {
+  opacity: 0;
+}
+#page-action-buttons {
+  transition: opacity 0.15s ease;
+}
+#nav-bar:not([customizing="true"])
+  > #nav-bar-customization-target
+  > #urlbar-container:not(:hover)
+  > #urlbar:not([focused])
+  > #urlbar-input-container
+  > #tracking-protection-icon-container {
+  opacity: 0;
+}
+#tracking-protection-icon-container {
+  transition: opacity 0.15s ease;
+}
+
+
+/*Full Screen Warning*/
+#fullscreen-warning{
+    background-color: rgba(25,25,25) !important;
+    border-color: rgb(20,20,20) !important;
+    max-width: 500px !important;
+    max-height: 50px !important;
+    border-radius: 50px !important;
+    font-size: 12px !important;
+}
+
+.pointerlockfswarning-generic-text,
+.pointerlockfswarning-domain-text{
+    font-size: 15px !important;
+    color: rgb(255,255,255) !important;
+    text-shadow: none !important;
+}
+
+
+/* Uncomment to Hide tabs bar for Tree style tabs (Credit u/jfgxyz on Reddit) */
+toolbar#TabsToolbar {
+    height: 0px;
+    min-height: 0 !important;
+    padding-top: 15px;
+    background-color: #1a1b26 !important;     
+}
+.toolbar-items {
+   visibility: collapse;
+}
+hbox#nav-bar-customization-target {
+    padding-left: 80px !important;
+}
+
+
+/* Uncomment to Hide TreeStyleTab Header (Only Funtion Working!!!!) */ 
+/* #sidebar-box #sidebar-header {
+   display: none !important;
+}
+#sidebar-box{
+   bac
+} */
+
+/* SIDEBERY */
+
+/* hides the sidebar header */
+#sidebar-header {
+	display: none !important;
+}
+
+.tab[selected="true"] {
+	visibility: collapse;
+	height: 0px;
+}
+
+.tabbrowser-tab {
+	visibility: collapse;
+	height: 0px;
+}
+
+.tabbrowser-tab[visuallyselected="true"] {
+	visibility: collapse;
+	height: 0px;
+}
+
+/* AUTO HIDE SIDE BAR */
+
+#sidebar-box {
+	--uc-sidebar-width: 44px; 
+	--uc-sidebar-hover-width: 260px;
+	--uc-autohide-sidebar-delay: 1ms; /* Waiting time before hiding sidebar */
+	position: relative;
+	min-width: var(--uc-sidebar-width) !important;
+	width: var(--uc-sidebar-width) !important;
+	max-width: var(--uc-sidebar-width) !important;
+	z-index: 100;
+}
+
+#sidebar-box[positionend] {
+	direction: rtl;
+}
+#sidebar-box[positionend] > * {
+	direction: ltr;
+}
+
+#sidebar-box[positionend]:-moz-locale-dir(rtl) {
+	direction: ltr;
+}
+#sidebar-box[positionend]:-moz-locale-dir(rtl) > * {
+	direction: rtl;
+}
+
+/* HIDE SIDE BAR IN FULL SCREEN */
+/* #main-window[sizemode="fullscreen"] #sidebar-box {
+	--uc-sidebar-width: 0px;
+} */
+
+#sidebar-splitter {
+	display: none;
+}
+
+#sidebar-header {
+	overflow: hidden;
+	color: var(--chrome-color, inherit) !important;
+}
+
+#sidebar {
+	transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
+	min-width: var(--uc-sidebar-width) !important;
+	will-change: min-width;
+}
+
+#sidebar-box:hover > #sidebar {
+	min-width: var(--uc-sidebar-hover-width) !important;
+	transition-delay: 0ms !important;
+}
+
+.sidebar-panel {
+	background-color: transparent !important;
+	color: var(--newtab-text-primary-color) !important;
+}
+
+.sidebar-panel #search-box {
+	-moz-appearance: none !important;
+	background-color: rgba(249, 249, 250, 0.1) !important;
+	color: inherit !important;
+}
+
+/* Add sidebar divider and give it background */
+
+#sidebar,
+#sidebar-header {
+	background-color: inherit !important;
+/* 	border-inline: 1px solid rgb(80, 80, 80); */
+	border-inline-width: 0px 1px;
+}
+
+#sidebar-box:not([positionend]) > :-moz-locale-dir(rtl),
+#sidebar-box[positionend] > * {
+	border-inline-width: 1px 0px;
+}
+
+/* Move statuspanel to the other side when sidebar is hovered so it doesn't get covered by sidebar */
+
+#sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel {
+	inset-inline: auto 0px !important;
+}
+#sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel-label {
+	margin-inline: 0px !important;
+	border-left-style: solid !important;
+}
