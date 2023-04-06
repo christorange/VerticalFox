@@ -1,4 +1,3 @@
-
  /* Suppress Connecting/Waiting/Reading/Transerring */
  #statuspanel[type="status"] {
    display: none !important;
@@ -11,43 +10,30 @@
 /* URL BAR */
 
 #urlbar-container{
-   margin-bottom: 15px;
+   margin-bottom: 3px;
 }
 
 #urlbar-background { 
-/*     outline: none !important;  */
     box-shadow: none !important;
     border-radius: 30px !important;
 }
 
 #urlbar[focused="true"] #urlbar-background{
-    outline: none !important;
-/*     box-shadow: 0 0 10px 0px  #b4f9f8 !important; */
+    outline: solid 1px #b4f9f8 !important;
 }
 
  /* Inactive Address/Search Field */
-
- :root:not([lwt-default-theme-in-dark-mode]) #urlbar-background {
-   background-color: rgba(0,0,0,.05) !important;
- }
- 
- :root[lwt-default-theme-in-dark-mode] #urlbar-background {
+#urlbar-background {
     background: #24283b !important;  
  }
 
  /* Active Address/Search Field Dropdown */
- :root:not([lwt-default-theme-in-dark-mode])  #urlbar[breakout][breakout-extend] > #urlbar-background {
-    background: rgba(250,250,250,1) !important;
- }
- 
- :root[lwt-default-theme-in-dark-mode]  #urlbar[breakout][breakout-extend] > #urlbar-background {
+#urlbar[breakout][breakout-extend] > #urlbar-background {
+	 outline: none !important;
+	 box-shadow: none !important;
     background: #000 !important;
     opacity: 0.85 ;
-/*     box-shadow: 0 0 15px 0 #b4f9f8 !important; */
 }
-
-
-
  /*  ---------  */
  /* | Borders | */
  /*  ---------  */
@@ -94,15 +80,11 @@
  /* Navigation Bar */
  
 #nav-bar {
-   margin-top: -10px;
-   padding-bottom: 5px;
+   margin-top: -30px;
+   padding-bottom: 2px;
 }
 
- :root:not([lwt-default-theme-in-dark-mode]) #nav-bar {
-   background-color: #d5d6db !important;
- }
-
- :root[lwt-default-theme-in-dark-mode] #nav-bar {
+#nav-bar {
    background-color: #1a1b26 !important;
  }
  
@@ -110,23 +92,14 @@
 
  
  /* Bookmarks Bar */
- :root:not([lwt-default-theme-in-dark-mode]) #PersonalToolbar {
-    background-color: rgba(255,255,255,.65) !important;
- }
- 
- :root[lwt-default-theme-in-dark-mode] #PersonalToolbar {
-    background-color: rgba(0,0,0,0.3) !important;
+#PersonalToolbar {
+    background-color: #1a1b26 !important;
  }
  
  
  /* Navigation Bar Separator */
- 
- :root[lwt-default-theme-in-dark-mode] #navigator-toolbox {
-   border-color:rgba(0,0,0,0.3) !important;
- }
- 
- :root:not([lwt-default-theme-in-dark-mode]) #navigator-toolbox {
-   border-color:rgba(240,240,240, 1) !important;
+#navigator-toolbox {
+   border-color:#1a1b26 !important;
  }
  /* Navigation bar Buttons */
 :root,toolbar{ --toolbarbutton-hover-background: rgba(255,255,255,.11) !important; }
@@ -210,11 +183,9 @@
 }
 
 
-/* Uncomment to Hide tabs bar for Tree style tabs (Credit u/jfgxyz on Reddit) */
+/* Uncomment to Hide tabs bar */
 toolbar#TabsToolbar {
     height: 0px;
-    min-height: 0 !important;
-    padding-top: 15px;
     background-color: #1a1b26 !important;     
 }
 .toolbar-items {
@@ -224,14 +195,6 @@ hbox#nav-bar-customization-target {
     padding-left: 80px !important;
 }
 
-
-/* Uncomment to Hide TreeStyleTab Header (Only Funtion Working!!!!) */ 
-/* #sidebar-box #sidebar-header {
-   display: none !important;
-}
-#sidebar-box{
-   bac
-} */
 
 /* SIDEBERY */
 
