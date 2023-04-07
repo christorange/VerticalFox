@@ -2,12 +2,14 @@
 	/* Tab and PinnedTab height adjustment */
 	--tabs-height: 33px;
 	--tabs-pinned-height: var(--tabs-height);
+	
 	/* Dark Theme base settings */
 	--bg: #1a1b26 !important;
 	--tabs-fg: #d4d4d4 !important;
 	--tabs-bg-hover: #3b3948 !important;
 	--tabs-activated-bg: #5b5b66 !important;
 	--nav-btn-activated-bg: #1f222f !important;
+	--panel-btn: #f2f2f2 !important;
 }
 
 #root .Tab {
@@ -74,7 +76,7 @@
 
 .NavigationBar .panel-btn > svg,
 .NavigationBar .panel-btn > img {
-	fill: #f2f2f2 !important;
+	fill: var(--panel-btn) !important;
 }
 
 /* SIDEBAR HACK PATCHES */
