@@ -1,6 +1,6 @@
 ![](./assets/gif-1.gif)
 # VerticalFox
-Get an Edge like auto-hide vertical tabs bar on Firefox! Powerd by Sidebery, you can have your bookmarks, pinned tabs all in side bar and get a minimalism look. Support MacOS and Windows.
+Get an Edge like auto-hide vertical tabs bar on Firefox! Powerd by Sidebery, you can have your bookmarks, pinned tabs all in side bar and get a minimalism look. Support MacOS and Windows. Only supports **Dark Mode** for now, will support light mode if there are ppl using this project and want it :P
 
 
 
