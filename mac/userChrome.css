@@ -1,10 +1,16 @@
 :root[lwt-default-theme-in-dark-mode]:-moz-lwtheme{
    --bg: #1a1b26;
-   --urlbar-bg: #171717;
+   
+   --urlbar-bg: #0d0d15;
    --urlbar-border-top: #000;
-   --urldrop-bg: #171717;
-   --urlbar-border-bottom: #313131;
-   --arrowpanel-background: var(--bg) !important;
+   --urldrop-bg: #0d0d15;
+   --urlbar-border-bottom: #404040;
+   --urlbar-height: 30px;
+   --urlbar-outline: #414868;
+   
+   --fullscreen-warn: rgb(25,25,25);
+   
+   --arrowpanel-background: var(--urlbar-bg) !important;
    --button-hover-bgcolor: rgba(159, 159, 159, 0.35) !important;
    --button-active-bgcolor: rgba(255, 255, 255, .2) !important;
    --button-bgcolor: rgba(117, 117, 117, 0.9) !important;
@@ -18,11 +24,16 @@
 
 :root:not([lwt-default-theme-in-dark-mode]):-moz-lwtheme{
    --bg: #f1f5f9;
+   
    --urlbar-bg: #cbd5e1;
    --urlbar-border-top: #9ca3af;
    --urlbar-border-bottom: #fff;
    --urldrop-bg: #cbd5e1;
-   --arrowpanel-background: var(--bg) !important;
+   --urlbar-outline: #94a3b8;
+   
+   --fullscreen-warn: rgb(25,25,25);
+   
+   --arrowpanel-background: #e2e8f0 !important;
    --button-hover-bgcolor: #9699a3 !important;
 }
 
@@ -39,7 +50,10 @@
 #urlbar {
    border-radius: 30px !important;
    border: 0 !important;
-   
+}
+
+#urlbar:not(.megabar):not([focused="true"]):hover {
+  outline: 1px solid var(--urlbar-outline) !important;
 }
 
 #urlbar[focused="true"] {
@@ -51,6 +65,13 @@
 
 #urlbar[breakout][breakout-extend]{
    border: none !important;
+   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+   top: calc(
+      (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2 ) !important;
+   left: 0 !important;
+   width: 100% !important;
 }
 
 #urlbar-container{
@@ -68,14 +89,25 @@
    outline: none !important;
 }
 
+#wrapper-urlbar-container #urlbar {
+  height: var(--urlbar-height) !important;
+}
+
  /* Active Address/Search Field Dropdown */
 #urlbar[breakout][breakout-extend] > #urlbar-background {
    outline: none !important;
    box-shadow: none !important;
    background: var(--urldrop-bg) !important;
-   opacity: 0.85 ;
+   border-radius: 15px !important;
 }
 
+#urlbar[breakout][breakout-extend] > #urlbar-input-container,
+#urlbar-input-container {
+  height: var(--urlbar-height) !important;
+  padding-block: 0px !important;
+  padding-inline: 0px !important;
+  transition: none !important;
+}
 
  /* | Borders | */
  
@@ -121,8 +153,7 @@
  /* Navigation Bar */
  
 #nav-bar {
-   margin-top: -10px;
-   padding-bottom: 5px;
+   margin-top: -20px;
 }
 
 #nav-bar {
@@ -156,7 +187,6 @@
 
  /* Toolbar Buttons */
 #PersonalToolbar {
-  background-image: url(image/noise-512x512.png) !important;
   background-color: #2a2a2ac0 !important;
   -webkit-backdrop-filter: blur(32px) !important;
   backdrop-filter: blur(32px) !important;
@@ -188,13 +218,15 @@
 
 
 /*Full Screen Warning*/
+
 #fullscreen-warning{
-    background-color: rgba(25,25,25) !important;
-    border-color: rgb(20,20,20) !important;
-    max-width: 500px !important;
-    max-height: 50px !important;
-    border-radius: 50px !important;
-    font-size: 12px !important;
+   background-color: var(--fullscreen-warn) !important;
+   border-color: var(--fullscreen-warn) !important;
+   max-width: 500px !important;
+   max-height: 50px !important;
+   border-radius: 50px !important;
+   font-size: 12px !important;
+   opacity: 0.8 !important;
 }
 
 .pointerlockfswarning-generic-text,
