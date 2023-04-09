@@ -1,3 +1,30 @@
+:root[lwt-default-theme-in-dark-mode]:-moz-lwtheme{
+   --bg: #1a1b26;
+   --urlbar-bg: #171717;
+   --urlbar-border-top: #000;
+   --urldrop-bg: #171717;
+   --urlbar-border-bottom: #313131;
+   --arrowpanel-background: var(--bg) !important;
+   --button-hover-bgcolor: rgba(159, 159, 159, 0.35) !important;
+   --button-active-bgcolor: rgba(255, 255, 255, .2) !important;
+   --button-bgcolor: rgba(117, 117, 117, 0.9) !important;
+   --toolbarbutton-icon-fill-opacity: 0.8 !important;
+   --arrowpanel-border-color: rgb(55, 55, 55) !important;
+   
+   --dark-menu-background-color: rgba(34, 34, 36, .5) !important;
+	--dark-menu-border-color: rgb(55, 55, 55) !important;
+	--dark-menuitem-hover-background-color: rgba(159, 159, 159, 0.35) !important;
+}
+
+:root:not([lwt-default-theme-in-dark-mode]):-moz-lwtheme{
+   --bg: #f1f5f9;
+   --urlbar-bg: #cbd5e1;
+   --urlbar-border-top: #9ca3af;
+   --urlbar-border-bottom: #fff;
+   --urldrop-bg: #cbd5e1;
+   --arrowpanel-background: var(--bg) !important;
+   --button-hover-bgcolor: #9699a3 !important;
+}
 
  /* Suppress Connecting/Waiting/Reading/Transerring */
  #statuspanel[type="status"] {
@@ -9,39 +36,48 @@
  }
 
 /* URL BAR */
+#urlbar {
+   border-radius: 30px !important;
+   border: 0 !important;
+   
+}
+
+#urlbar[focused="true"] {
+   border: 0 !important;
+   border-top: 1px solid var(--urlbar-border-top) !important;
+   border-bottom: 1px solid var(--urlbar-border-bottom) !important;
+   border-radius: 30px !important;
+}
+
+#urlbar[breakout][breakout-extend]{
+   border: none !important;
+}
 
 #urlbar-container{
    margin-bottom: 15px;
 }
 
-#urlbar-background { 
-    box-shadow: none !important;
-    border-radius: 30px !important;
+#urlbar-background {
+   box-shadow: none !important;
+   border-radius: 30px !important;
+   background: var(--urlbar-bg) !important;  
 }
 
 #urlbar[focused="true"] #urlbar-background{
-    outline: solid 1px #b4f9f8 !important;
+   box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.35) !important;
+   outline: none !important;
 }
-
- /* Inactive Address/Search Field */
-#urlbar-background {
-    background: #24283b !important;  
- }
 
  /* Active Address/Search Field Dropdown */
 #urlbar[breakout][breakout-extend] > #urlbar-background {
-    outline: none !important;
-    box-shadow: none !important;
-    background: #000 !important;
-    opacity: 0.85 ;
-/*     box-shadow: 0 0 15px 0 #b4f9f8 !important; */
+   outline: none !important;
+   box-shadow: none !important;
+   background: var(--urldrop-bg) !important;
+   opacity: 0.85 ;
 }
 
 
-
- /*  ---------  */
  /* | Borders | */
- /*  ---------  */
  
  .tabbrowser-tab::after {
     border: 0 !important;
@@ -90,20 +126,17 @@
 }
 
 #nav-bar {
-   background-color: #1a1b26 !important;
+   background-color: var(--bg) !important;
  }
- 
 
-
- 
  /* Bookmarks Bar */
 #PersonalToolbar {
-    background-color: #1a1b26 !important;
+    background-color: var(--bg) !important;
  }
 
  /* Navigation Bar Separator */
 #navigator-toolbox {
-   border-color:#1a1b26 !important;
+   border-color:var(--bg) !important;
  }
  /* Navigation bar Buttons */
 :root,toolbar{ --toolbarbutton-hover-background: rgba(255,255,255,.11) !important; }
@@ -127,21 +160,6 @@
   background-color: #2a2a2ac0 !important;
   -webkit-backdrop-filter: blur(32px) !important;
   backdrop-filter: blur(32px) !important;
-}
-:root:-moz-lwtheme {
-	--arrowpanel-background:  rgba(34, 34, 36, 1) !important;
-	-panel-separator-zap-gradient: linear-gradient(90deg, rgba(11,11,11,1) 0%, rgba(193,118,40,1) 39%, rgba(52,12,48,1) 100%) !important;
-	--button-hover-bgcolor: rgba(159, 159, 159, 0.35) !important;
-	--button-active-bgcolor: rgba(255, 255, 255, .2) !important;
-	--button-bgcolor: rgba(117, 117, 117, 0.9) !important;
-	--toolbarbutton-icon-fill-opacity: 0.8 !important;
-	--arrowpanel-border-color: rgb(55, 55, 55) !important;
-}
-
-:root:-moz-lwtheme  {
-	--dark-menu-background-color: rgba(34, 34, 36, .5) !important;
-	--dark-menu-border-color: rgb(55, 55, 55) !important;
-	--dark-menuitem-hover-background-color: rgba(159, 159, 159, 0.35) !important;
 }
 
 /* Show URL buttons on Hover */
@@ -192,7 +210,7 @@ toolbar#TabsToolbar {
     height: 0px;
     min-height: 0 !important;
     padding-top: 15px;
-    background-color: #1a1b26 !important;     
+    background-color: var(--bg) !important;     
 }
 .toolbar-items {
    visibility: collapse;

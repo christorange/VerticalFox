@@ -2,14 +2,9 @@
 	/* Tab and PinnedTab height adjustment */
 	--tabs-height: 33px;
 	--tabs-pinned-height: var(--tabs-height);
-	
-	/* Dark Theme base settings */
-	--bg: #1a1b26 !important;
-	--tabs-fg: #d4d4d4 !important;
-	--tabs-bg-hover: #3b3948 !important;
-	--tabs-activated-bg: #5b5b66 !important;
-	--nav-btn-activated-bg: #1f222f !important;
-	--panel-btn: #f2f2f2 !important;
+	/* Light Theme base settings */
+	--bg: #f1f5f9 !important;
+	--warn: #fca5a5 !important;
 }
 
 #root .Tab {
@@ -31,7 +26,7 @@
 .Tab .close > svg:hover {
 	/* Styling the tab close button */
 	border-radius: 3px;
-	background: #8c4351 !important;
+	background: var(--warn) !important;
 	opacity: 80%;
 }
 
