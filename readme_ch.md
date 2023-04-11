@@ -15,5 +15,6 @@
 6. 在打开的目录下新建 `chrome` 文件夹，名称必须全部小写。
 7. 复制下载好的 `userChrome.css` 到 `chrome` 文件夹中，重启浏览器。
 8. 打开 Sidebery 的设置，前往 **Styles Editor**，在右侧复制 `dark_sidebery_styles.css` (暗黑模式主题) 或 `light_sidebery_styles.css` (亮色模式主题) 中的代码。
+![](assets/img1.png)
 
 一切就绪！
