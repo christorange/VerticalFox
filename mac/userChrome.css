@@ -185,13 +185,6 @@
   border-radius: 3px 3px 3px 3px !important;
 }
 
- /* Toolbar Buttons */
-#PersonalToolbar {
-  background-color: #2a2a2ac0 !important;
-  -webkit-backdrop-filter: blur(32px) !important;
-  backdrop-filter: blur(32px) !important;
-}
-
 /* Show URL buttons on Hover */
    #nav-bar:not([customizing="true"])
   > #nav-bar-customization-target
