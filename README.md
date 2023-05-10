@@ -20,7 +20,7 @@ Get an Edge like auto-hide vertical tabs bar on Firefox! Powerd by Sidebery, you
 4. Once you have your `chrome` folder under your profile directory, copy the `userChrome.css` you downloaded into `chrome`. Alternatively you can create a blank `userChrome.css` and paste the code. Restart your browser.
 
 
-5. Go to the settings of Sidebery, go to **Styles editor**, paste all the code from `dark_sidebery_styles.css` if you wanna use dark theme, or `light_sidebery_styles.css` if you wanna use light theme.
+5. Go to the settings of Sidebery, go to **Styles editor**, paste all the code from `switch_light&dark.css`if you wanna use automatically switch between dark theme and light theme, or `dark_sidebery_styles.css` if you wanna use dark theme, or `light_sidebery_styles.css` if you wanna use light theme.
 
 
 ![](/assets/img1.png)
