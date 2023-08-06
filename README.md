@@ -32,3 +32,13 @@ When you switch between light and dark browser theme, remember to also change it
 ![](assets/img2.png)
 
 Now you can enjoy your new Firefox!
+
+## Frequently Asked
+Q: **Dark mode doesn't work (or behaves abnormally).**
+A: Set your system theme as dark, then set your Firefox theme as 'auto' in **Extensions & Themes**. If it still doesn't work, go to releases and use the files in the **dark only** release.
+
+Q: **How to move sidebar to the right?**
+A: Before you apply `userChrome.css`, click the header of sidebar, click 'move to right side'. If you have applied `userChrome.css`, find the comment `/*hide the sidebar header*/` then delete or comment out the section between this comment and `/*AUTO HIDE SIDEBAR*/`, the header will appear. 
+
+Q: **How to disable sidebar auto-hide?**
+A: Go to the comment `/*AUTO HIDE SIDEBAR*/`, delete the next 10 lines of code below it.
