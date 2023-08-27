@@ -294,7 +294,7 @@ hbox#nav-bar-customization-target {
 }
 
 /* HIDE SIDE BAR IN FULL SCREEN */
-/* #main-window[sizemode="fullscreen"] #sidebar-box {
+/* #main-window[inFullscreen="true"] #sidebar-box {
 	--uc-sidebar-width: 0px;
 } */
 
