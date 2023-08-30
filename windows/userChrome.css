@@ -151,12 +151,6 @@
  
  
  /* Navigation Bar */
- 
- #nav-bar {
-   margin-top: -30px;
-   padding-bottom: 2px;
-}
-
 #nav-bar {
    background-color: var(--bg) !important;
  }
