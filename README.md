@@ -6,9 +6,13 @@
 
 Get an Edge like auto-hide vertical tabs bar on Firefox! Powerd by Sidebery, you can have your bookmarks, pinned tabs all in side bar and get a clean, compact look. Support MacOS and Windows.
 
-![](./assets/gif1.gif)
+<p align='center'>
+   <img src='./assets/dark_mode.gif' style='height:500px; margin-bottom: 32px;'/>
+  <img src='./assets/light_mode.gif' style='height:500px'/>
+</p>
 
 **I'm only working on compatability with the latest stable release of Firefox, if you find any flaws, please update your browser first.**
+
 
 *The auto hide also works on Tree Style Tabs, but you may need to adjust the css to achieve the best look.*
 
@@ -25,11 +29,14 @@ Get an Edge like auto-hide vertical tabs bar on Firefox! Powerd by Sidebery, you
 4. Once you have your `chrome` folder under your profile directory, copy the `userChrome.css` you downloaded into `chrome`. Alternatively you can create a blank `userChrome.css` and paste the code. Restart your browser.
 5. Go to the settings of Sidebery, go to **Styles editor**, paste all the code from `sidebery_styles.css`. 
 
-![](/assets/img1.png)
-
+<p align='center'>
+   <img src='./assets/img1.png' style='height:400px;'/>
+</p>
 When you switch between light and dark browser theme, remember to also change it in sidebery settings for best experience: appearance -> color scheme
 
-![](assets/img2.png)
+<p align='center'>
+   <img src='./assets/img2.png' style='height:400px;'/>
+</p>
 
 Now you can enjoy your new Firefox!
 
