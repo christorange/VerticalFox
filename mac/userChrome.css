@@ -1,40 +1,44 @@
-:root[lwt-default-theme-in-dark-mode]:-moz-lwtheme{
-   --bg: #1a1b26;
-   
-   --urlbar-bg: #0d0d15;
-   --urlbar-border-top: #000;
-   --urldrop-bg: #0d0d15;
-   --urlbar-border-bottom: #404040;
-   --urlbar-height: 30px;
-   --urlbar-outline: #414868;
-   
-   --fullscreen-warn: rgb(25,25,25);
-   
-   --arrowpanel-background: var(--urlbar-bg) !important;
-   --button-hover-bgcolor: rgba(159, 159, 159, 0.35) !important;
-   --button-active-bgcolor: rgba(255, 255, 255, .2) !important;
-   --button-bgcolor: rgba(117, 117, 117, 0.9) !important;
-   --toolbarbutton-icon-fill-opacity: 0.8 !important;
-   --arrowpanel-border-color: rgb(55, 55, 55) !important;
-   
-   --dark-menu-background-color: rgba(34, 34, 36, .5) !important;
-	--dark-menu-border-color: rgb(55, 55, 55) !important;
-	--dark-menuitem-hover-background-color: rgba(159, 159, 159, 0.35) !important;
+@media (prefers-color-scheme:dark){
+   :root{
+      --bg: #1a1b26;
+
+      --urlbar-bg: #0d0d15;
+      --urlbar-border-top: #000;
+      --urldrop-bg: #0d0d15;
+      --urlbar-border-bottom: #404040;
+      --urlbar-height: 30px;
+      --urlbar-outline: #414868;
+
+      --fullscreen-warn: rgb(25,25,25);
+
+      --arrowpanel-background: var(--urlbar-bg) !important;
+      --button-hover-bgcolor: rgba(159, 159, 159, 0.35) !important;
+      --button-active-bgcolor: rgba(255, 255, 255, .2) !important;
+      --button-bgcolor: rgba(117, 117, 117, 0.9) !important;
+      --toolbarbutton-icon-fill-opacity: 0.8 !important;
+      --arrowpanel-border-color: rgb(55, 55, 55) !important;
+
+      --dark-menu-background-color: rgba(34, 34, 36, .5) !important;
+      --dark-menu-border-color: rgb(55, 55, 55) !important;
+      --dark-menuitem-hover-background-color: rgba(159, 159, 159, 0.35) !important;
+   }
 }
 
-:root:not([lwt-default-theme-in-dark-mode]):-moz-lwtheme{
-   --bg: #f1f5f9;
+@media (prefers-color-scheme:light){
+   :root{
+      --bg: #f1f5f9;
    
-   --urlbar-bg: #cbd5e1;
-   --urlbar-border-top: #9ca3af;
-   --urlbar-border-bottom: #fff;
-   --urldrop-bg: #cbd5e1;
-   --urlbar-outline: #94a3b8;
-   
-   --fullscreen-warn: rgb(25,25,25);
-   
-   --arrowpanel-background: #e2e8f0 !important;
-   --button-hover-bgcolor: #9699a3 !important;
+      --urlbar-bg: #cbd5e1;
+      --urlbar-border-top: #9ca3af;
+      --urlbar-border-bottom: #fff;
+      --urldrop-bg: #cbd5e1;
+      --urlbar-outline: #94a3b8;
+
+      --fullscreen-warn: rgb(25,25,25);
+
+      --arrowpanel-background: #e2e8f0 !important;
+      --button-hover-bgcolor: #9699a3 !important;
+   }
 }
 
  /* Suppress Connecting/Waiting/Reading/Transerring */
@@ -75,7 +79,7 @@
 }
 
 #urlbar-container{
-   margin-bottom: 12px;
+   margin-bottom:10px;
 }
 
 #urlbar-background {
@@ -153,7 +157,11 @@
  /* Navigation Bar */
  
 #nav-bar {
-   margin-top: -15px;
+   margin-top: -30px;
+}
+
+#nav-bar[inFullscreen="true"]{
+   margin-top: -13px;
 }
 
 #nav-bar {
