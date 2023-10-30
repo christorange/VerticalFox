@@ -1,7 +1,7 @@
 ![](./assets/header.png)
 
 # VerticalFox
-> ❗️❗️If you're, or going to use this setup, **DO NOT UPGRADE TO Sidebery v5.** If you have, remove it and install v4.10 [here](https://addons.mozilla.org/en-US/firefox/addon/sidebery/versions/), then turn off auto update.
+### ❗️❗️ If you're, or going to use this setup, **DO NOT UPGRADE TO Sidebery v5.** If you have, remove it and install v4.10 [here](https://addons.mozilla.org/en-US/firefox/addon/sidebery/versions/), then turn off auto update.
 
 [中文文档](readme_ch.md)
 
