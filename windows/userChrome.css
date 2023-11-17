@@ -430,3 +430,108 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 	margin-inline: 0px !important;
 	border-left-style: solid !important;
 }
+
+
+
+/* Windows specific styles */
+@media (-moz-platform: windows),
+       (-moz-platform: windows-win10) {
+    /* Hide main tabs toolbar */
+
+    #nav-bar{
+        border-inline: var(--uc-window-drag-space-width,80px) solid var(--toolbar-bgcolor) ;
+        border-inline-style: solid !important;
+        border-right-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-width,0px));
+
+        padding-top: .5px !important; /* This makes it possible to drag the maximized window. */
+        margin-left: -80px; /* Removes the space left when hiding .titlebar-buttonbox-container */
+    }
+    
+    #back-button { 
+		margin-top: -.5px !important; 
+	}
+	
+	#forward-button { 
+		margin-top: -.5px !important; 
+	}
+	
+	#reload-button { 
+		margin-top: -.5px !important; 
+	}
+    
+	#PanelUI-button {
+		margin-top: -.5px !important; 
+	}
+    
+	#nav-bar-overflow-button{
+		margin-top: -.5px !important; 
+	}
+
+    :root {
+        --uc-toolbar-height: 32px;
+        --chrome-content-separator-color: none !important;
+    }
+
+    :root:not([uidensity="compact"]) {
+        --uc-toolbar-height: 38px;
+    }
+
+    #TabsToolbar {
+        visibility: collapse !important;
+    }
+
+    /* Hide the Windows controls on the left side. */
+    #TabsToolbar .titlebar-buttonbox-container {
+        visibility: hidden !important;
+    }
+    /* Line up the Windows controls with the rest of the icons in the toolbar. */
+    :root:not([sizemode="maximized"]) .titlebar-buttonbox-container {
+        margin-top: 3px;
+    }
+
+
+    :root:not([inFullscreen]) #nav-bar {
+        margin-top: calc(0px - var(--uc-toolbar-height));
+        z-index: 2;
+    }
+
+    #toolbar-menubar {
+        min-height: unset !important;
+        height: var(--uc-toolbar-height) !important;
+        position: relative;
+    }
+
+    /* For a rounded button design, uncomment both lines in .titlebar-buttonbox. */
+    .titlebar-buttonbox {
+        z-index:3 !important;
+        /* padding-right:3px; */
+    }
+
+    .titlebar-buttonbox * {
+        /* border-radius: 5px; */
+        width:35px;
+        height:38px;
+    }
+
+    #main-menubar {
+        -moz-box-flex: 1;
+        background-color: var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor);
+        background-clip: padding-box;
+        border-right: 30px solid transparent;
+        border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px) 20 / 30px;
+    }
+
+    #toolbar-menubar:not([inactive]) {
+        z-index: 2;
+    }
+
+    #toolbar-menubar[inactive] > #menubar-items {
+        opacity: 0;
+        pointer-events: none;
+        margin-left: var(--uc-window-drag-space-width,0px);
+    }
+
+    :root[inFullscreen] #nav-bar {
+        border-right: none !important;
+    }
+}
