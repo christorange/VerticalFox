@@ -52,4 +52,4 @@ A: Before you apply `userChrome.css`, click the header of sidebar, click 'move t
 
 Q: **How to disable sidebar auto-hide?**
 
-A: Go to the comment `/*AUTO HIDE SIDEBAR*/`, delete the next 10 lines of code below it.
+A: Go to the comment `/*AUTO HIDE SIDE BAR*/`, delete the next 10 lines of code below it.
