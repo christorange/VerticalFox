@@ -27,8 +27,8 @@ Get an Edge like auto-hide vertical tabs bar on Firefox! Powerd by Sidebery, you
 
    1. Navigate to `about:config` in the address bar and accept the risks.
    2. Search for `toolkit.legacyUserProfileCustomizations.stylesheets` and toggle it to true (by double clicking on it).
-   3. Navigate to `about:support` in the address bar, under **Application Basics**, find **Profile Folder** and open it. You should now see your profile folder.
-   4. Inside your profile folder, create a new folder named `chrome` (all lower case).
+   3. Navigate to `about:support` in the address bar, under **Application Basics**, find **Profile Directory** and open it. You should now see your profile directory.
+   4. Inside your profile directory, create a new folder named `chrome` (all lower case).
 4. Once you have your `chrome` folder under your profile directory, copy the `userChrome.css` you downloaded into `chrome`. Alternatively you can create a blank `userChrome.css` and paste the code. Restart your browser.
 5. Go to the settings of Sidebery, go to **Styles editor**, paste all the code from `sidebery_styles.css`. 
 
