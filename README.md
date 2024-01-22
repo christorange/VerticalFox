@@ -35,11 +35,7 @@ Get an Edge like auto-hide vertical tabs bar on Firefox! Powerd by Sidebery, you
 <p align='center'>
    <img src='./assets/img1.png' style='height:400px;'/>
 </p>
-When you switch between light and dark browser theme, remember to also change it in sidebery settings for best experience: appearance -> color scheme
 
-<p align='center'>
-   <img src='./assets/img2.png' style='height:400px;'/>
-</p>
 
 Now you can enjoy your new Firefox!
 
