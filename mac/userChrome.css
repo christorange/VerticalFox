@@ -17,6 +17,7 @@
       --button-bgcolor: rgba(117, 117, 117, 0.9) !important;
       --toolbarbutton-icon-fill-opacity: 0.8 !important;
       --arrowpanel-border-color: rgb(55, 55, 55) !important;
+      --identity-btn-hover-color: rgba(117,117,117) !important;
 
       --dark-menu-background-color: rgba(34, 34, 36, .5) !important;
       --dark-menu-border-color: rgb(55, 55, 55) !important;
@@ -25,9 +26,9 @@
 }
 
 @media (prefers-color-scheme:light){
-   :root{
+   :root{   
       --bg: #f1f5f9;
-   
+
       --urlbar-bg: #cbd5e1;
       --urlbar-border-top: #9ca3af;
       --urlbar-border-bottom: #fff;
@@ -37,18 +38,21 @@
       --fullscreen-warn: rgb(25,25,25);
 
       --arrowpanel-background: #e2e8f0 !important;
-      --button-hover-bgcolor: #9699a3 !important;
+      --button-hover-bgcolor: #cbd5e1 !important;
+      --button-active-bgcolor: #cbd5e1 !important;
+      --identity-btn-hover-color: white !important;
    }
 }
 
  /* Suppress Connecting/Waiting/Reading/Transerring */
- #statuspanel[type="status"] {
+/*  #statuspanel[type="status"] {
    display: none !important;
- }
+ } */
+
  /* Suppress Link Destination Overlay */
- #statuspanel[type="overLink"] {
+/*  #statuspanel[type="overLink"] {
    display: none !important;
- }
+ } */
 
 /* URL BAR */
 #urlbar {
@@ -79,7 +83,7 @@
 }
 
 #urlbar-container{
-   margin-bottom:10px;
+   margin-bottom: 10px;
 }
 
 #urlbar-background {
@@ -111,6 +115,29 @@
   padding-block: 0px !important;
   padding-inline: 0px !important;
   transition: none !important;
+}
+
+/* Idendity icon button */
+#identity-icon-box.identity-box-button{
+   margin: 3px 0 3px 3px;
+   border-radius: 14px !important;
+   background-color: var(--bg) !important;
+   opacity: 0.8
+}
+
+#identity-icon-box.identity-box-button:hover{
+   cursor: pointer;  
+   background-color: var(--identity-btn-hover-color) !important;
+}
+
+/* Track protection icon */
+#tracking-protection-icon-container{
+   border-radius: 16px !important;;
+}
+
+/* Star button */
+#star-button-box{
+   border-radius: 16px !important;
 }
 
  /* | Borders | */
@@ -157,16 +184,13 @@
  /* Navigation Bar */
  
 #nav-bar {
-   margin-top: -30px;
+   margin-top: -22px;
+   background-color: var(--bg) !important;
 }
 
 #nav-bar[inFullscreen="true"]{
-   margin-top: -13px;
+   margin-top: -10px;
 }
-
-#nav-bar {
-   background-color: var(--bg) !important;
- }
 
  /* Bookmarks Bar */
 #PersonalToolbar {
@@ -175,10 +199,15 @@
 
  /* Navigation Bar Separator */
 #navigator-toolbox {
-   border-color:var(--bg) !important;
+   border-color: var(--bg) !important;
+   background-color: var(--bg) !important;
+   padding-top: 10px;
  }
+
  /* Navigation bar Buttons */
-:root,toolbar{ --toolbarbutton-hover-background: rgba(255,255,255,.11) !important; }
+toolbarbutton:hover{
+   cursor: pointer;
+}
 
  /* Show Tab close button on hover */
 .tabbrowser-tab:not([pinned]) .tab-close-button {
