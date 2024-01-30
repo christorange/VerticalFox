@@ -132,12 +132,20 @@
 
 /* Track protection icon */
 #tracking-protection-icon-container{
-   border-radius: 16px !important;;
+   border-radius: 16px !important;
+}
+
+#tracking-protection-icon-container:hover{
+   cursor: pointer !important;
 }
 
 /* Star button */
 #star-button-box{
    border-radius: 16px !important;
+}
+
+#star-button-box:hover{
+   cursor: pointer !important;
 }
 
  /* | Borders | */
