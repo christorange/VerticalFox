@@ -320,3 +320,17 @@
         opacity: 100;
     }
 }
+
+.Tab .title {
+    transition: margin-left 300ms ease;
+}
+.Tab:hover {
+    --tabs-inner-gap: 8px;
+}
+.Tab:hover .title {
+    margin-left: 8px;
+}
+
+.Tab[data-discarded="true"] .title {
+    opacity: 80%;
+}
