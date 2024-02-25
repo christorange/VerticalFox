@@ -1,9 +1,6 @@
 ![](./assets/header.png)
 
 # VerticalFox
-> [!IMPORTANT]
-> If you're, or going to use this setup, **DO NOT UPGRADE TO Sidebery v5.** If you have, remove it and install v4.10 [here](https://addons.mozilla.org/en-US/firefox/addon/sidebery/versions/), then turn off auto update.
-
 [中文文档](readme_ch.md)
 
 Get an Edge like auto-hide vertical tabs bar on Firefox! Powerd by Sidebery, you can have your bookmarks, pinned tabs all in side bar and get a clean, compact look. **Works on MacOS and Windows**.
@@ -31,7 +28,7 @@ Get an Edge like auto-hide vertical tabs bar on Firefox! Powerd by Sidebery, you
    3. Navigate to `about:support` in the address bar, under **Application Basics**, find **Profile Folder** and open it. You should now see your profile folder.
    4. Inside your profile folder, create a new folder named `chrome` (all lower case).
 4. Once you have your `chrome` folder under your profile directory, copy the `userChrome.css` you downloaded into `chrome`. Alternatively you can create a blank `userChrome.css` and paste the code. Restart your browser.
-5. Go to the settings of Sidebery, go to **Styles editor**, paste all the code from `sidebery_styles.css`. 
+5. Go to the settings of Sidebery, go to **Styles editor**, paste all the code from `sidebery_styles.css`. Please turn on "**Show navigation bar in one line**" under "**Navigation bar**" in the settings.
 
 <p align='center'>
    <img src='./assets/img1.png' style='height:400px;'/>
