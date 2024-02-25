@@ -194,6 +194,7 @@
 #nav-bar {
    margin-top: -22px;
    background-color: var(--bg) !important;
+   position: static !important;
 }
 
 #nav-bar[inFullscreen="true"]{
