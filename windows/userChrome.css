@@ -306,6 +306,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 #nav-bar { 
     padding-left: 0px !important;
     padding-right: 118px !important;
+    position: static !important;
 } 
 
 #navigator-toolbox:not([inFullscreen]) #TabsToolbar 
