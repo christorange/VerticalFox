@@ -363,7 +363,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 
 /* Line up the Windows controls with the rest of the icons in the toolbar. */
 :root:not([sizemode="maximized"]) .titlebar-buttonbox-container {
-   padding-top: 6px;
+   padding-top: 3px;
 }
 
 .titlebar-buttonbox {
