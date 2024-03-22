@@ -340,12 +340,12 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 }
 
 @media only screen and (max-width: 670px) {
-   #main-window #navigator-toolbox:not([inFullscreen]) #TabsToolbar .titlebar-buttonbox-container {
+   #main-window[titlepreface*="[S] "] #navigator-toolbox:not([inFullscreen]) #TabsToolbar .titlebar-buttonbox-container {
       visibility: visible !important;
       position: relative !important;
       display: block !important;
    }
-   #main-window #navigator-toolbox:not([inFullscreen]) #nav-bar {
+   #main-window[titlepreface*="[S] "] #navigator-toolbox:not([inFullscreen]) #nav-bar {
       padding-right: initial !important;
    }
    #TabsToolbar.browser-toolbar{
@@ -363,7 +363,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 
 /* Line up the Windows controls with the rest of the icons in the toolbar. */
 :root:not([sizemode="maximized"]) .titlebar-buttonbox-container {
-   padding-top: 3px;
+   padding-top: 6px;
 }
 
 .titlebar-buttonbox {
@@ -401,10 +401,10 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 
 /* AUTO HIDE SIDE BAR */
 
-#sidebar-box {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
 	--uc-sidebar-width: 44px; 
 	--uc-sidebar-hover-width: 260px;
-	--uc-autohide-sidebar-delay: 1ms; /* Waiting time before hiding sidebar */
+	--uc-autohide-sidebar-delay: 4ms; /* Waiting time before hiding sidebar */
 	position: relative;
 	min-width: var(--uc-sidebar-width) !important;
 	width: var(--uc-sidebar-width) !important;
@@ -412,22 +412,22 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 	z-index: 100;
 }
 
-#sidebar-box[positionend] {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend] {
 	direction: rtl;
 }
-#sidebar-box[positionend] > * {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend] > * {
 	direction: ltr;
 }
 
-#sidebar-box[positionend]:-moz-locale-dir(rtl) {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend]:-moz-locale-dir(rtl) {
 	direction: ltr;
 }
-#sidebar-box[positionend]:-moz-locale-dir(rtl) > * {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend]:-moz-locale-dir(rtl) > * {
 	direction: rtl;
 }
 
 /* HIDE SIDE BAR IN FULL SCREEN */
-#main-window[inFullscreen="true"] #sidebar-box {
+#main-window[titlepreface*="[S] "][inFullscreen="true"] #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
 	--uc-sidebar-width: 0px;
 }
 
@@ -446,7 +446,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 	will-change: min-width;
 }
 
-#sidebar-box:hover > #sidebar {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover > #sidebar {
 	min-width: var(--uc-sidebar-hover-width) !important;
 	transition-delay: 0ms !important;
 }
@@ -471,17 +471,17 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 	border-inline-width: 0px 1px;
 }
 
-#sidebar-box:not([positionend]) > :-moz-locale-dir(rtl),
-#sidebar-box[positionend] > * {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([positionend]) > :-moz-locale-dir(rtl),
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend] > * {
 	border-inline-width: 1px 0px;
 }
 
 /* Move statuspanel to the other side when sidebar is hovered so it doesn't get covered by sidebar */
 
-#sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([positionend]):hover ~ #appcontent #statuspanel {
 	inset-inline: auto 0px !important;
 }
-#sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel-label {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([positionend]):hover ~ #appcontent #statuspanel-label {
 	margin-inline: 0px !important;
 	border-left-style: solid !important;
 }
