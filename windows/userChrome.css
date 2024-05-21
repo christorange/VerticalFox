@@ -84,6 +84,7 @@
 
 #urlbar-container{
    margin-bottom: 3px;
+   display: initial;
 }
 
 #urlbar-background {
