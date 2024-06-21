@@ -410,7 +410,6 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 	min-width: var(--uc-sidebar-width) !important;
 	width: var(--uc-sidebar-width) !important;
 	max-width: var(--uc-sidebar-width) !important;
-	z-index: 100;
 }
 
 #sidebar-box[positionend] {
