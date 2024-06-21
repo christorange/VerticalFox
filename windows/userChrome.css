@@ -410,8 +410,6 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 	min-width: var(--uc-sidebar-width) !important;
 	width: var(--uc-sidebar-width) !important;
 	max-width: var(--uc-sidebar-width) !important;
-	z-index: 0;
-	transition: z-index 0s linear 1ms; /* Ensure z-index changes with a delay */
 }
 
 #sidebar-box[positionend] {
@@ -446,10 +444,6 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 	transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
 	min-width: var(--uc-sidebar-width) !important;
 	will-change: min-width;
-}
-
-#sidebar-box:hover {
-  z-index: 100;
 }
 
 #sidebar-box:hover > #sidebar {
