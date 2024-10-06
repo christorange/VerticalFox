@@ -403,13 +403,13 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 /* AUTO HIDE SIDE BAR */
 
 #sidebar-box {
-	--uc-sidebar-width: 44px; 
+	--uc-sidebar-min-width: 44px; 
 	--uc-sidebar-hover-width: 260px;
 	--uc-autohide-sidebar-delay: 1ms; /* Waiting time before hiding sidebar */
 	position: relative;
-	min-width: var(--uc-sidebar-width) !important;
+	min-width: var(--uc-sidebar-min-width) !important;
 	width: var(--uc-sidebar-width) !important;
-	max-width: var(--uc-sidebar-width) !important;
+	max-width: var(--uc-sidebar-hover-width) !important;
 }
 
 #sidebar-box[positionend] {
@@ -442,7 +442,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 
 #sidebar {
 	transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
-	min-width: var(--uc-sidebar-width) !important;
+	min-width: var(--uc-sidebar-min-width) !important;
 	will-change: min-width;
 }
 
