@@ -12,7 +12,8 @@ Get an Edge like auto-hide vertical tabs bar on Firefox! Powerd by Sidebery, you
    <img src='./assets/light_mode.gif' style='height:500px;'/>
 </p>
 
-**I'm only working on compatability with the latest stable release of Firefox, if you find any flaws, please update your browser first.**
+> [!NOTE]
+> Thank you for choosing my theme. However, due to the more and more annoying and absurd design of Firefox CSS selectors along with Firefox updates, I am no longer actively maintaining this project. PRs are still welcome and I will reponse in time. You can also find some very excellent themes projects [here](https://github.com/stars/christorange/lists/firefoxcss).
 
 
 *The auto hide also works on Tree Style Tabs, but you may need to adjust the css to achieve the best look.*

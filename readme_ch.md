@@ -4,8 +4,11 @@
 
 在 Firefox 上你也能拥有 Edge 浏览器的自动伸缩垂直标签栏！该主题配合 Sidebery 插件使用，所以收藏夹、标签置顶、独立工作区等功能都一并集成到了侧边栏中，赋予你的 Firefox 一个干净、极简的外观。同时支持 MacOS , Windows 与 Linux。
 
-![](assets/gif1.gif)
+![](assets/dark_mode.gif)
+![](assets/light_mode.gif)
 
+> [!NOTE]
+> 感谢选择我的主题。然而，由于 Firefox CSS selectors 随着 Firefox 更新变得越来越离谱，我将不再积极维护该项目。仍然欢迎大家提 PR 我会及时处理。您也可以在[这里](https://github.com/stars/christorange/lists/firefoxcss)找到很多其他非常优秀的主题。
 # 安装指南
 
 1. 安装 [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/) 插件。
