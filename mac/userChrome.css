@@ -59,7 +59,7 @@
    border: 0 !important;
 }
 
-#urlbar:not(.megabar):not([focused="true"]):hover {
+#urlbar:not(.megabar):hover {
   outline: 1px solid var(--urlbar-outline) !important;
 }
 
@@ -67,18 +67,6 @@
    border: 0 !important;
    border-top: 1px solid var(--urlbar-border-top) !important;
    border-bottom: 1px solid var(--urlbar-border-bottom) !important;
-   border-radius: 30px !important;
-}
-
-#urlbar[breakout][breakout-extend]{
-   border: none !important;
-   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-      rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
-   top: calc(
-      (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2 ) !important;
-   left: 0 !important;
-   width: 100% !important;
 }
 
 #urlbar-container{
@@ -103,6 +91,18 @@
 }
 
  /* Active Address/Search Field Dropdown */
+#urlbar[breakout][breakout-extend]{
+   border: none !important;
+   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+   top: calc(
+      (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2 ) !important;
+   left: 0 !important;
+   width: 100% !important;
+   border-radius: 15px !important;
+}
+
 #urlbar[breakout][breakout-extend] > #urlbar-background {
    outline: none !important;
    box-shadow: none !important;
@@ -193,12 +193,7 @@
  /* Navigation Bar */
  
 #nav-bar {
-   margin-top: -22px;
    background-color: var(--bg) !important;
-}
-
-#nav-bar[inFullscreen="true"]{
-   margin-top: -10px;
 }
 
  /* Bookmarks Bar */
@@ -210,8 +205,8 @@
 #navigator-toolbox {
    border-color: var(--bg) !important;
    background-color: var(--bg) !important;
-   padding-top: 10px;
- }
+   padding-top: 8px;
+}
 
  /* Navigation bar Buttons */
 toolbarbutton{
@@ -219,7 +214,12 @@ toolbarbutton{
 }
 
 toolbarbutton:hover{
-   cursor: pointer;
+   cursor: pointer !important;;
+}
+
+toolbarbutton#urlbar-zoom-button{
+   margin-top: auto !important;
+   margin-bottom: auto !important;
 }
 
  /* Show Tab close button on hover */
@@ -401,4 +401,8 @@ hbox#nav-bar-customization-target {
 #sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel-label {
 	margin-inline: 0px !important;
 	border-left-style: solid !important;
+}
+
+.titlebar-buttonbox{
+   margin-bottom: -40px !important;
 }
