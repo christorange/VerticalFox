@@ -428,6 +428,11 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
     z-index: 100;
 }
 
+:root[BookmarksToolbarOverlapsBrowser] #sidebar-box {
+    padding-top: 0 !important;
+    top: var(--bookmarks-toolbar-overlapping-browser-height);
+}
+
 #sidebar-box[positionend] {
     direction: rtl;
 }
