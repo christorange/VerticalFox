@@ -288,6 +288,9 @@ toolbar#TabsToolbar {
     padding-top: 15px;
     background-color: var(--bg) !important;     
 }
+toolbar#TabsToolbar > .private-browsing-indicator-with-label {
+   display: none;
+}
 .toolbar-items {
    visibility: collapse;
 }
