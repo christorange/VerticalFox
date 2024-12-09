@@ -283,9 +283,13 @@ toolbarbutton#urlbar-zoom-button{
 /* Uncomment to Hide tabs bar for Tree style tabs (Credit u/jfgxyz on Reddit) */
 toolbar#TabsToolbar {
     height: 0px;
+    width: 80px;
     min-height: 0 !important;
     padding-top: 15px;
     background-color: var(--bg) !important;     
+}
+toolbar#TabsToolbar > .private-browsing-indicator-with-label {
+   display: none;
 }
 .toolbar-items {
    visibility: collapse;
