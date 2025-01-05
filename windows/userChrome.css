@@ -78,9 +78,8 @@
       rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
    top: calc(
       (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2 ) !important;
-   /* left: 0 !important; */
-   /* width: 100% !important; */
-   width: calc(--urlbar-width) !important;
+   left: 0 !important;
+   width: 100% !important;
 }
 
 #urlbar-container{
@@ -410,7 +409,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 	position: relative;
 	min-width: var(--uc-sidebar-min-width) !important;
 	width: var(--uc-sidebar-width) !important;
-	max-width: var(--uc-sidebar-min-width) !important;
+	max-width: var(--uc-sidebar-hover-width) !important;
    z-index: 100 !important;
 }
 
