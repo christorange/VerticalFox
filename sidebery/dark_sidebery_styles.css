@@ -13,6 +13,11 @@
 	--warn: #8c4351 !important;
 }
 
+#root.root {
+		--toolbar-bg: var(--bg) !important;
+		--frame-bg: var(--bg) !important;
+}
+
 #root .Tab {
 	--tabs-indent: 7px;
 }
