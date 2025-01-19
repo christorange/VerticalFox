@@ -13,10 +13,6 @@
 			--frame-bg: var(--bg) !important;
 	}
 
-    #root .Tab {
-        --tabs-indent: 7px;
-    }
-
     /* TABS */
 
     .Tab .lvl-wrapper:after {
@@ -25,7 +21,7 @@
 
     .Tab {
         margin: auto;
-        width: 94%;
+        width: 98%;
         border-radius: 3px;
     }
 
@@ -86,7 +82,7 @@
 
         /* Fix to tab tree identation when minimised */
         #root:not(:hover) .Tab {
-            --tabs-indent: 0px;
+            --tabs-indent: -1000px;
         }
 
         .Tab[data-lvl]>div.lvl-wrapper {
@@ -183,10 +179,6 @@
 			--frame-bg: var(--bg) !important;
 	}
 
-    #root .Tab {
-        --tabs-indent: 7px;
-    }
-
     /* TABS */
 
     .Tab .lvl-wrapper:after {
@@ -195,7 +187,7 @@
 
     .Tab {
         margin: auto;
-        width: 94%;
+        width: 98%;
         border-radius: 3px;
     }
 
@@ -256,7 +248,7 @@
 
         /* Fix to tab tree identation when minimised */
         #root:not(:hover) .Tab {
-            --tabs-indent: 0px;
+            --tabs-indent: -1000px;
         }
 
         .Tab[data-lvl]>div.lvl-wrapper {
@@ -329,6 +321,38 @@
     .PinnedTab[data-updated="true"] .update-badge {
         opacity: 100;
     }
+}
+
+#root:not(:hover) .Tab .audio {
+    top: -10px;
+    left: 26px;
+    transform: scale(0.8);
+    transition: top 0.2s ease-in-out;
+}
+
+#root:hover .Tab .audio {
+    top: 0;
+    transition: top 0.2s ease-in-out;
+}
+
+#root:not(:hover) .Tab .fav-icon {
+    left: 2px;
+    transition: top 0.2s ease-in-out;
+}
+
+#root:hover .Tab .fav-icon {
+    transition: top 0.2s ease-in-out;
+}
+
+.ScrollBox > .top-shadow[data-show="true"], .ScrollBox > .bottom-shadow[data-show="true"] {
+    opacity: 0.5;
+}
+
+.top-horizontal-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
 }
 
 .Tab .title {
