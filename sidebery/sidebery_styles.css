@@ -50,7 +50,7 @@
     /* NAV BAR */
 
     .NavigationBar {
-        height: 41px !important;
+        height: 35px !important;
         padding: 4.5px 0px 0px 4.5px !important;
         /*background-color: # !important;*/
         margin-bottom: 5px;
@@ -216,7 +216,7 @@
     /* NAV BAR */
 
     .NavigationBar {
-        height: 41px !important;
+        height: 35px !important;
         padding: 4.5px 0px 0px 4.5px !important;
         /*background-color: # !important;*/
         margin-bottom: 5px;
@@ -367,4 +367,36 @@
 
 .Tab[data-discarded="true"] .title {
     opacity: 80%;
+}
+
+#nav_bar .nav-item {
+    opacity: 0;
+    transition: opacity 0.7s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+#nav_bar .nav-item:first-child {
+    opacity: 1;
+}
+
+#root:hover #nav_bar .nav-item {
+    opacity: 1;
+    transition-delay: calc(var(1) * 0.05s);
+}
+
+#root:not(:hover) #nav_bar .nav-item {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: calc(var(1) * 0.05s);
+}
+
+#root:not(:hover) #nav_bar .nav-item[data-active="true"] {
+    opacity: 1;
+    position: absolute;
+    left: 45%;
+    transform: translateX(-50%);
+    transition: left 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#root:not(:hover) .static-btns {
+    display: none;
 }
