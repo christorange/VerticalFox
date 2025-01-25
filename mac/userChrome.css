@@ -28,17 +28,17 @@
    :root{   
       --bg: #f1f5f9;
 
-      --urlbar-bg: #cbd5e1;
+      --urlbar-bg: #e1e8ef;
       --urlbar-border-top: #9ca3af;
       --urlbar-border-bottom: #fff;
-      --urldrop-bg: #cbd5e1;
+      --urldrop-bg: #e1e8ef;
       --urlbar-outline: #94a3b8;
 
       --fullscreen-warn: rgb(25,25,25);
 
       --arrowpanel-background: #e2e8f0 !important;
-      --button-hover-bgcolor: #cbd5e1 !important;
-      --button-active-bgcolor: #cbd5e1 !important;
+      --button-hover-bgcolor: #e1e8ef !important;
+      --button-active-bgcolor: #e1e8ef !important;
       --identity-btn-hover-color: white !important;
    }
 }
