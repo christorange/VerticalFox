@@ -4,8 +4,8 @@
 
 在 Firefox 上你也能拥有 Edge 浏览器的自动伸缩垂直标签栏！该主题配合 Sidebery 插件使用，所以收藏夹、标签置顶、独立工作区等功能都一并集成到了侧边栏中，赋予你的 Firefox 一个干净、极简的外观。同时支持 MacOS , Windows 与 Linux。
 
-![](assets/dark_mode.gif)
-![](assets/light_mode.gif)
+![](assets/dark_theme.gif)
+![](assets/light_theme.gif)
 
 > [!NOTE]
 > 感谢选择我的主题。然而，由于 Firefox CSS selectors 随着 Firefox 更新变得越来越离谱，我将不再积极维护该项目。仍然欢迎大家提 PR 我会及时处理。您也可以在[这里](https://github.com/stars/christorange/lists/firefoxcss)找到很多其他非常优秀的主题。
@@ -28,13 +28,6 @@
 一切就绪！
 
 ## 常见问题
-
-Q： 暗黑模式不起效（或显示不正常）。
-
-A： 设置你的系统主题配色为暗色，然后在 **扩展与主题** 下设置火狐主题为 'auto'。如果仍未解决问题，使用 releases 中 **dark only** 下的文件。
-
-<br/>
-
 Q： 如何将侧边栏移到右边？
 
 A： 在应用 `userChrome.css` 之前，点击侧边栏的顶部栏，会弹出相应选项。如果已经应用了 `userChrome.css`，找到 `/*hide the sidebar header*/` 这句注释，删掉或注释掉位于它和下面 `/*AUTO HIDE SIDEBAR*/` 这句注释之间的代码，侧边栏的顶部栏会显示出来。

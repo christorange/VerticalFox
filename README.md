@@ -6,10 +6,10 @@
 Get an Edge like auto-hide vertical tabs bar on Firefox! Powerd by Sidebery, you can have your bookmarks, pinned tabs all in side bar and get a clean, compact look. **Works on MacOS , Windows and Linux**.
 
 <p align='center'>
-   <img src='./assets/dark_mode.gif' style='height:500px;'/>
+   <img src='./assets/dark_theme.gif' style='max-height:480px;'/>
 </p>
 <p align='center'>
-   <img src='./assets/light_mode.gif' style='height:500px;'/>
+   <img src='./assets/light_theme.gif' style='max-height:480px;'/>
 </p>
 
 > [!NOTE]
