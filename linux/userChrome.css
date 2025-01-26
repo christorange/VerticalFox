@@ -87,8 +87,9 @@
     top: calc(
         (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
     ) !important;
-    left: 0 !important;
-    width: 100% !important;
+    /* left: 0 !important; */
+    /* width: 100% !important; */
+    width: calc(--urlbar-width) !important;
 }
 
 #urlbar-container {

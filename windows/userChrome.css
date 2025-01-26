@@ -29,18 +29,17 @@
    :root{
       --bg: #f1f5f9;
    
-      --urlbar-bg: #cbd5e1;
+      --urlbar-bg: #e1e8ef;
       --urlbar-border-top: #9ca3af;
       --urlbar-border-bottom: #fff;
-      --urldrop-bg: #cbd5e1;
+      --urldrop-bg: #e1e8ef;
       --urlbar-outline: #94a3b8;
 
       --fullscreen-warn: rgb(25,25,25);
 
       --arrowpanel-background: #e2e8f0 !important;
-      --button-hover-bgcolor: #9699a3 !important;
-      --button-hover-bgcolor: #cbd5e1 !important;
-      --button-active-bgcolor: #cbd5e1 !important;
+      --button-hover-bgcolor: #e1e8ef !important;
+      --button-active-bgcolor: #e1e8ef !important;
       --identity-btn-hover-color: white !important;
    }
 }
@@ -60,8 +59,8 @@
    border: 0 !important;
 }
 
-#urlbar:not(.megabar):not([focused="true"]):hover {
-  outline: 1px solid var(--urlbar-outline) !important;
+#urlbar:not(.megabar):hover {
+    outline: 1px solid var(--urlbar-outline) !important;
 }
 
 #urlbar[focused="true"] {
@@ -404,7 +403,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 /* AUTO HIDE SIDE BAR */
 
 #sidebar-box {
-	--uc-sidebar-min-width: 44px; 
+	--uc-sidebar-min-width: 40px;
 	--uc-sidebar-hover-width: 260px;
 	--uc-autohide-sidebar-delay: 1ms; /* Waiting time before hiding sidebar */
 	position: relative;
