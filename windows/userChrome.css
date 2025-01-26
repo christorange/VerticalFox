@@ -62,7 +62,6 @@
 
 #urlbar:not(.megabar):hover {
     outline: 1px solid var(--urlbar-outline) !important;
-    border-radius: 14px !important;
 }
 
 #urlbar[focused="true"] {
