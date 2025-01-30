@@ -486,7 +486,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 
 /* HIDE SIDE BAR IN FULL SCREEN */
 #main-window[inFullscreen="true"] #sidebar-box {
-	--uc-sidebar-width: 0px;
+    --uc-sidebar-min-width: 1px;
 }
 
 #sidebar-splitter {
