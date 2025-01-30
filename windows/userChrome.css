@@ -194,14 +194,7 @@
    cursor: pointer !important;
 }
 
-/* Star button */
-#star-button-box{
-    border-radius: 16px !important;
-    cursor: pointer !important;
-}
-
-/* Picture in picture button */
-#picture-in-picture-button{
+#page-action-buttons > * {
     border-radius: 16px !important;
     cursor: pointer !important;
 }
