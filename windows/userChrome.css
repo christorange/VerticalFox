@@ -64,11 +64,11 @@
 }
 
 #urlbar[breakout-extend="true"]:not(.megabar):hover {
-    border-radius: 14px !important;
+    border-radius: 15px !important;
 }
 
 #urlbar-search-mode-indicator {
-    border-radius: 14px !important;
+    border-radius: 15px !important;
     height: 24px !important;
     margin: auto;
     margin-inline-end: 5px !important;
@@ -90,13 +90,13 @@
 }
 
 #urlbar[searchmode] #urlbar-searchmode-switcher {
-    border-top-left-radius: 14px !important;
-    border-bottom-left-radius: 14px !important;
+    border-top-left-radius: 15px !important;
+    border-bottom-left-radius: 15px !important;
 }
 
 #urlbar[searchmode] #searchmode-switcher-chicklet {
-    border-top-right-radius: 14px !important;
-    border-bottom-right-radius: 14px !important;
+    border-top-right-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
 }
 
 #urlbar:not([searchmode]) #urlbar-searchmode-switcher {
