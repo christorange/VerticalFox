@@ -199,6 +199,16 @@
     cursor: pointer !important;
 }
 
+#urlbar-revert-button-container > * {
+    border-radius: 16px !important;
+    cursor: pointer !important;
+}
+
+#urlbar-go-button {
+    border-radius: 16px !important;
+    cursor: pointer !important;
+}
+
  /* | Borders | */
  
  .tabbrowser-tab::after {
