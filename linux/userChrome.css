@@ -34,18 +34,18 @@
     :root {
         --bg: #f1f5f9;
 
-        --urlbar-bg: #cbd5e1;
+        --urlbar-bg: #e1e8ef;
         --urlbar-border-top: #9ca3af;
         --urlbar-border-bottom: #fff;
-        --urldrop-bg: #cbd5e1;
+        --urldrop-bg: #e1e8ef;
         --urlbar-outline: #94a3b8;
 
         --fullscreen-warn: rgb(25, 25, 25);
 
         --arrowpanel-background: #e2e8f0 !important;
         --button-hover-bgcolor: #9699a3 !important;
-        --button-hover-bgcolor: #cbd5e1 !important;
-        --button-active-bgcolor: #cbd5e1 !important;
+        --button-hover-bgcolor: #e1e8ef !important;
+        --button-active-bgcolor: #e1e8ef !important;
         --identity-btn-hover-color: white !important;
     }
 }
@@ -65,8 +65,54 @@
     border: 0 !important;
 }
 
-#urlbar:not(.megabar):not([focused="true"]):hover {
+#urlbar:not(.megabar):hover {
     outline: 1px solid var(--urlbar-outline) !important;
+}
+
+#urlbar[breakout-extend="true"]:not(.megabar):hover {
+    border-radius: 15px !important;
+}
+
+#urlbar-search-mode-indicator {
+    border-radius: 15px !important;
+    height: 24px !important;
+    margin: auto;
+    margin-inline-end: 5px !important;
+}
+
+#urlbar[searchmode] #identity-box {
+    margin-inline-end: 0px !important;
+}
+
+#urlbar-searchmode-switcher {
+    height: 24px !important;
+    margin: auto auto auto 2px !important;
+}
+
+#searchmode-switcher-chicklet {
+    height: 24px !important;
+    margin: auto !important;
+    margin-inline-end: 5px !important;
+}
+
+#urlbar[searchmode] #urlbar-searchmode-switcher {
+    border-top-left-radius: 15px !important;
+    border-bottom-left-radius: 15px !important;
+}
+
+#urlbar[searchmode] #searchmode-switcher-chicklet {
+    border-top-right-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+}
+
+#urlbar:not([searchmode]) #urlbar-searchmode-switcher {
+    border-radius: 30px !important;
+    margin: auto auto auto 2px !important;
+    margin-inline-end: 5px !important;
+}
+
+#identity-permission-box {
+    border-radius: 30px !important;
 }
 
 #urlbar[focused="true"] {
@@ -130,7 +176,7 @@
 
 /* Idendity icon button */
 #identity-icon-box.identity-box-button {
-    margin: 3px 0 3px 3px;
+    margin: 3px;
     border-radius: 14px !important;
     background-color: var(--bg) !important;
     opacity: 0.8;
@@ -139,6 +185,14 @@
 #identity-icon-box.identity-box-button:hover {
     cursor: pointer;
     background-color: var(--identity-btn-hover-color) !important;
+}
+
+#identity-icon-box.identity-permission-box {
+    border-radius: 16px !important;
+}
+
+#identity-permission-box:hover{
+    cursor: pointer !important;
 }
 
 /* Track protection icon */
@@ -150,12 +204,18 @@
     cursor: pointer !important;
 }
 
-/* Star button */
-#star-button-box {
+#page-action-buttons > * {
     border-radius: 16px !important;
+    cursor: pointer !important;
 }
 
-#star-button-box {
+#urlbar-revert-button-container > * {
+    border-radius: 16px !important;
+    cursor: pointer !important;
+}
+
+#urlbar-go-button {
+    border-radius: 16px !important;
     cursor: pointer !important;
 }
 
@@ -419,7 +479,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 /* AUTO HIDE SIDE BAR */
 
 #sidebar-box {
-    --uc-sidebar-width: 44px;
+    --uc-sidebar-width: 40px;
     --uc-sidebar-hover-width: 260px;
     --uc-autohide-sidebar-delay: 1ms; /* Waiting time before hiding sidebar */
     position: relative;
@@ -450,7 +510,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 
 /* HIDE SIDE BAR IN FULL SCREEN */
 #main-window[inFullscreen="true"] #sidebar-box {
-    --uc-sidebar-width: 0px;
+    --uc-sidebar-min-width: 1px;
 }
 
 
