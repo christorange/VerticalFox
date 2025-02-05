@@ -134,13 +134,6 @@ button[id^="urlbar-engine-one-off-item-"] {
     background-color: var(--urlbar-elements) !important;
 }
 
-#urlbar[focused="true"] {
-   border: 0 !important;
-   border-top: 1px solid var(--urlbar-border-top) !important;
-   border-bottom: 1px solid var(--urlbar-border-bottom) !important;
-   border-radius: 30px !important;
-}
-
 #urlbar[breakout][breakout-extend]{
    border: none !important;
    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
@@ -164,8 +157,7 @@ button[id^="urlbar-engine-one-off-item-"] {
    background: var(--urlbar-bg) !important;  
 }
 
-#urlbar[focused="true"] #urlbar-background{
-   box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.35) !important;
+#urlbar[focused="true"] #urlbar-background {
    outline: none !important;
 }
 
