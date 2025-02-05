@@ -134,6 +134,11 @@ button[id^="urlbar-engine-one-off-item-"] {
     background-color: var(--urlbar-elements) !important;
 }
 
+.urlbarView-action-btn {
+    background-color: transparent !important;
+    margin-inline-end: 0 !important;
+}
+
 #urlbar[breakout][breakout-extend]{
    border: none !important;
    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
