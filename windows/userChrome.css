@@ -11,6 +11,8 @@
 
       --fullscreen-warn: rgb(25,25,25);
 
+      --urlbar-elements: #2B2A33;
+
       --arrowpanel-background: var(--urlbar-bg) !important;
       --button-hover-bgcolor: rgba(159, 159, 159, 0.35) !important;
       --button-active-bgcolor: rgba(255, 255, 255, .2) !important;
@@ -34,6 +36,8 @@
       --urlbar-border-bottom: #fff;
       --urldrop-bg: #e1e8ef;
       --urlbar-outline: #94a3b8;
+
+      --urlbar-elements: #f1f1f6;
 
       --fullscreen-warn: rgb(25,25,25);
 
@@ -72,6 +76,7 @@
     height: 24px !important;
     margin: auto;
     margin-inline-end: 5px !important;
+    background-color: var(--urlbar-elements) !important;
 }
 
 #urlbar[searchmode] #identity-box {
@@ -81,6 +86,7 @@
 #urlbar-searchmode-switcher {
     height: 24px !important;
     margin: auto auto auto 2px !important;
+    background-color: var(--urlbar-box-bgcolor) !important;
 }
 
 #searchmode-switcher-chicklet {
@@ -92,11 +98,13 @@
 #urlbar[searchmode] #urlbar-searchmode-switcher {
     border-top-left-radius: 15px !important;
     border-bottom-left-radius: 15px !important;
+    background-color: var(--urlbar-box-bgcolor) !important;
 }
 
 #urlbar[searchmode] #searchmode-switcher-chicklet {
     border-top-right-radius: 15px !important;
     border-bottom-right-radius: 15px !important;
+    background-color: var(--urlbar-box-bgcolor) !important;
 }
 
 #urlbar:not([searchmode]) #urlbar-searchmode-switcher {
@@ -107,6 +115,23 @@
 
 #identity-permission-box {
     border-radius: 30px !important;
+}
+
+#urlbar-results * {
+    border-radius: 16px !important;
+}
+
+button[id^="urlbar-engine-one-off-item-"] {
+    border-radius: 16px !important;
+}
+
+#urlbar-anon-search-settings {
+    border-radius: 16px !important;
+}
+
+.urlbarView-row[selected],
+.urlbarView-row:hover {
+    background-color: var(--urlbar-elements) !important;
 }
 
 #urlbar[focused="true"] {
@@ -168,7 +193,7 @@
 #identity-icon-box.identity-box-button{
    margin: 3px;
    border-radius: 14px !important;
-   background-color: var(--bg) !important;
+   background-color: var(--urlbar-elements) !important;
    opacity: 0.8
 }
 
