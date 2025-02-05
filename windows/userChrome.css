@@ -80,13 +80,13 @@
 }
 
 #urlbar[searchmode] #identity-box {
-    margin-inline-end: 0px !important;
+    margin-inline-end: 0 !important;
 }
 
 #urlbar-searchmode-switcher {
     height: 24px !important;
     margin: auto auto auto 2px !important;
-    background-color: var(--bg) !important;
+    background-color: var(--urlbar-elements) !important;
 }
 
 #searchmode-switcher-chicklet {
@@ -98,13 +98,13 @@
 #urlbar[searchmode] #urlbar-searchmode-switcher {
     border-top-left-radius: 15px !important;
     border-bottom-left-radius: 15px !important;
-    background-color: var(--bg) !important;
+    background-color: var(--urlbar-elements) !important;
 }
 
 #urlbar[searchmode] #searchmode-switcher-chicklet {
     border-top-right-radius: 15px !important;
     border-bottom-right-radius: 15px !important;
-    background-color: var(--bg) !important;
+    background-color: var(--urlbar-elements) !important;
 }
 
 #urlbar:not([searchmode]) #urlbar-searchmode-switcher {
