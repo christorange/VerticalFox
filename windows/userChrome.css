@@ -529,7 +529,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 	will-change: min-width;
 }
 
-#sidebar-box:hover > #sidebar {
+#sidebar-box:hover #sidebar {
 	min-width: var(--uc-sidebar-hover-width) !important;
 	transition-delay: 0ms !important;
 }
