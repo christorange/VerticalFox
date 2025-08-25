@@ -11,6 +11,8 @@
 
       --fullscreen-warn: rgb(25,25,25);
 
+      --urlbar-elements: #2B2A33;
+
       --arrowpanel-background: var(--urlbar-bg) !important;
       --button-hover-bgcolor: rgba(159, 159, 159, 0.35) !important;
       --button-active-bgcolor: rgba(255, 255, 255, .2) !important;
@@ -28,12 +30,14 @@
 @media (prefers-color-scheme:light){
    :root{
       --bg: #f1f5f9;
-   
+
       --urlbar-bg: #e1e8ef;
       --urlbar-border-top: #9ca3af;
       --urlbar-border-bottom: #fff;
       --urldrop-bg: #e1e8ef;
       --urlbar-outline: #94a3b8;
+
+      --urlbar-elements: #f1f1f6;
 
       --fullscreen-warn: rgb(25,25,25);
 
@@ -63,11 +67,76 @@
     outline: 1px solid var(--urlbar-outline) !important;
 }
 
-#urlbar[focused="true"] {
-   border: 0 !important;
-   border-top: 1px solid var(--urlbar-border-top) !important;
-   border-bottom: 1px solid var(--urlbar-border-bottom) !important;
-   border-radius: 30px !important;
+#urlbar[breakout-extend="true"]:not(.megabar):hover {
+    border-radius: 15px !important;
+}
+
+#urlbar-search-mode-indicator {
+    border-radius: 15px !important;
+    height: 24px !important;
+    margin: auto;
+    margin-inline-end: 5px !important;
+    background-color: var(--urlbar-elements) !important;
+}
+
+#urlbar[searchmode] #identity-box {
+    margin-inline-end: 0 !important;
+}
+
+#urlbar-searchmode-switcher {
+    height: 24px !important;
+    margin: auto auto auto 2px !important;
+    background-color: var(--urlbar-elements) !important;
+}
+
+#searchmode-switcher-chicklet {
+    height: 24px !important;
+    margin: auto !important;
+    margin-inline-end: 5px !important;
+}
+
+#urlbar[searchmode] #urlbar-searchmode-switcher {
+    border-top-left-radius: 15px !important;
+    border-bottom-left-radius: 15px !important;
+    background-color: var(--urlbar-elements) !important;
+}
+
+#urlbar[searchmode] #searchmode-switcher-chicklet {
+    border-top-right-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+    background-color: var(--urlbar-elements) !important;
+}
+
+#urlbar:not([searchmode]) #urlbar-searchmode-switcher {
+    border-radius: 30px !important;
+    margin: auto auto auto 2px !important;
+    margin-inline-end: 5px !important;
+}
+
+#identity-permission-box {
+    border-radius: 30px !important;
+}
+
+.urlbarView-row {
+    border-radius: 16px !important;
+}
+
+button[id^="urlbar-engine-one-off-item-"] {
+    border-radius: 16px !important;
+}
+
+#urlbar-anon-search-settings {
+    border-radius: 16px !important;
+}
+
+.urlbarView-row[selected],
+.urlbarView-row:hover {
+    background-color: var(--urlbar-elements) !important;
+}
+
+.urlbarView-action-btn {
+    background-color: transparent !important;
+    margin-inline-end: 0 !important;
 }
 
 #urlbar[breakout][breakout-extend]{
@@ -87,14 +156,13 @@
    display: initial;
 }
 
-#urlbar-background {
+.urlbar-background {
    box-shadow: none !important;
    border-radius: 30px !important;
-   background: var(--urlbar-bg) !important;  
+   background: var(--urlbar-bg) !important;
 }
 
-#urlbar[focused="true"] #urlbar-background{
-   box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.35) !important;
+#urlbar[focused="true"] .urlbar-background {
    outline: none !important;
 }
 
@@ -103,7 +171,7 @@
 }
 
  /* Active Address/Search Field Dropdown */
-#urlbar[breakout][breakout-extend] > #urlbar-background {
+#urlbar[breakout][breakout-extend] > .urlbar-background {
    outline: none !important;
    box-shadow: none !important;
    background: var(--urldrop-bg) !important;
@@ -120,15 +188,23 @@
 
 /* Idendity icon button */
 #identity-icon-box.identity-box-button{
-   margin: 3px 0 3px 3px;
+   margin: 3px;
    border-radius: 14px !important;
-   background-color: var(--bg) !important;
+   background-color: var(--urlbar-elements) !important;
    opacity: 0.8
 }
 
 #identity-icon-box.identity-box-button:hover{
-   cursor: pointer;  
+   cursor: pointer;
    background-color: var(--identity-btn-hover-color) !important;
+}
+
+#identity-icon-box.identity-permission-box {
+    border-radius: 16px !important;
+}
+
+#identity-permission-box:hover{
+    cursor: pointer !important;
 }
 
 /* Track protection icon */
@@ -140,17 +216,23 @@
    cursor: pointer !important;
 }
 
-/* Star button */
-#star-button-box{
-   border-radius: 16px !important;
+#page-action-buttons > * {
+    border-radius: 16px !important;
+    cursor: pointer !important;
 }
 
-#star-button-box{
-   cursor: pointer !important;
+#urlbar-revert-button-container > * {
+    border-radius: 16px !important;
+    cursor: pointer !important;
+}
+
+#urlbar-go-button {
+    border-radius: 16px !important;
+    cursor: pointer !important;
 }
 
  /* | Borders | */
- 
+
  .tabbrowser-tab::after {
     border: 0 !important;
  }
@@ -160,36 +242,36 @@
  #navigator-toolbox {
     border: 1 !important;
  }
- 
+
  .titlebar-spacer[type="pre-tabs"] {
     border: 0 !important;
  }
- 
+
  .tabbrowser-tab::after {
     border: 0 !important;
  }
- 
- #urlbar-background {
+
+ .urlbar-background {
     border: 0 !important;
  }
- 
+
 #urlbar[open] > .urlbarView > .urlbarView-body-outer > .urlbarView-body-inner {
      border-top: 0 !important;
  }
 
- 
+
  /* Active Tab */
  :root:not([lwt-default-theme-in-dark-mode]) .tab-background[selected],
- .tab-background[multiselected="true"] {	
+ .tab-background[multiselected="true"] {
     background: rgba(0,0,0,.05) !important;
  }
- 
+
  :root[lwt-default-theme-in-dark-mode] .tab-background[selected],
- .tab-background[multiselected="true"] {	
+ .tab-background[multiselected="true"] {
     background: rgba(0,0,0,.2) !important;
  }
- 
- 
+
+
  /* Navigation Bar */
 #nav-bar {
    background-color: var(--bg) !important;
@@ -204,7 +286,7 @@
 #navigator-toolbox {
    border-color:var(--bg) !important;
  }
- 
+
  /* Navigation bar Buttons */
  toolbarbutton:hover{
    cursor: pointer;
@@ -272,7 +354,7 @@
 toolbar#TabsToolbar {
     height: 0px;
     min-height: 0 !important;
-    background-color: var(--bg) !important;     
+    background-color: var(--bg) !important;
 }
 .toolbar-items {
    visibility: collapse;
@@ -286,7 +368,7 @@ toolbar#TabsToolbar {
 #nav-bar #PanelUI-button {
     -moz-box-ordinal-group: 0 !important;
 }
-   
+
 #nav-bar #PanelUI-button #PanelUI-menu-button {
    margin-right: 2px !important;
    margin-left: 2px !important;
@@ -299,25 +381,25 @@ toolbar#TabsToolbar {
 toolbar:not([customizing]) > #nav-bar-customization-target {
    -moz-box-ordinal-group: 2 !important;
 } */
-  
+
 /* ----- Close/min/max fix ----- */
 /* Fix popup position */
-#appMenu-popup {margin-inline: -244px !important;} 
+#appMenu-popup {margin-inline: -244px !important;}
 
-#nav-bar { 
+#nav-bar {
     padding-left: 0px !important;
     padding-right: 118px !important;
     position: static !important;
-} 
+}
 
-#navigator-toolbox:not([inFullscreen]) #TabsToolbar 
+#navigator-toolbox:not([inFullscreen]) #TabsToolbar
 .titlebar-buttonbox-container {
  visibility: visible !important;
   display: block  !important;
   position: absolute !important;
   top: 1px !important;
   left: unset !important;
-  right: 0 !important; 
+  right: 0 !important;
 }
 
 #TabsToolbar .titlebar-min {
@@ -429,7 +511,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 
 /* HIDE SIDE BAR IN FULL SCREEN */
 #main-window[inFullscreen="true"] #sidebar-box {
-	--uc-sidebar-width: 0px;
+    --uc-sidebar-min-width: 1px;
 }
 
 #sidebar-splitter {
@@ -447,7 +529,7 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 	will-change: min-width;
 }
 
-#sidebar-box:hover > #sidebar {
+#sidebar-box:hover #sidebar {
 	min-width: var(--uc-sidebar-hover-width) !important;
 	transition-delay: 0ms !important;
 }
